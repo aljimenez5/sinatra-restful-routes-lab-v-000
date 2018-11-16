@@ -29,6 +29,7 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/recipes/:id/delete' do
+    Recipe.find(params[:id]).destroy
     erb :delete
   end
   
